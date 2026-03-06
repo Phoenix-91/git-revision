@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Secure Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="login-card">
+                <!-- Logo/Header -->
+                <div class="login-header">
+                    <h1>Welcome Back</h1>
+                    <p>Sign in to your account</p>
+                </div>
+
+                <!-- Error/Success Messages -->
+                <div id="messageContainer" class="message-container"></div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="login-form">
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email"
+                            required
+                        >
+                        <span id="emailError" class="error-message"></span>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Enter your password"
+                                required
+                            >
+                            <button 
+                                type="button" 
+                                id="togglePassword" 
+                                class="toggle-password"
+                                aria-label="Toggle password visibility"
+                            >
+                                <span id="eyeIcon">👁️</span>
+                            </button>
+                        </div>
+                        <span id="passwordError" class="error-message"></span>
+                    </div>
+
+                    <!-- Remember Me & Forgot Password -->
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="login-btn">Sign In</button>
+                </form>
+
+                <!-- Sign Up Link -->
+                <div class="signup-section">
+                    <p>Don't have an account? <a href="#" class="signup-link">Sign up here</a></p>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider">OR</div>
+
+                <!-- Social Login Options -->
+                <div class="social-login">
+                    <button type="button" class="social-btn google-btn" aria-label="Login with Google">
+                        <span>Google</span>
+                    </button>
+                    <button type="button" class="social-btn github-btn" aria-label="Login with GitHub">
+                        <span>GitHub</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Demo Credentials Info -->
+            <div class="demo-info">
+                <p><strong>Demo Credentials:</strong></p>
+                <p>Email: <code>user@example.com</code></p>
+                <p>Password: <code>password123</code></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login Successful!</h2>
+            <p id="successMessage"></p>
+            <button type="button" class="modal-btn">Continue</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
